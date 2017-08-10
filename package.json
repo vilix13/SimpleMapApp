@@ -6,7 +6,7 @@
   "scripts": {
     "server:prod": "cross-env NODE_ENV=prod babel-node server/index.js",
     "server:dev": "cross-env NODE_ENV=dev babel-node server/index.js",
-    "build:prod": "webpack --config webpack.config.prod.js",
+    "build:prod": "webpack --config webpack.config.prod.js -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
