@@ -14,7 +14,7 @@ This is the implementation of the test task for working with map api.
 * User api.
 * Auth api.
 * Map features:
-  * Draw marker of the current location. (*Do not forget to allow use of geolocation in your browser settings)
+  * Draw marker of the current location. (**Do not forget to allow use of geolocation in your browser settings**)
   * ZoomIn\ZoomOut buttons implementation.
   * Adding user markers via double click on map.
   * Save\Load user markers to\from server.
