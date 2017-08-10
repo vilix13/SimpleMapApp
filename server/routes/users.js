@@ -34,13 +34,10 @@ router.get('/me', authenticate, (req, res) => {
 });
 
 router.get('/markers', authenticate, (req, res) => {
-  console.log(req.currentUser);
+
   const userId = req.currentUser.get('id');
-  console.log(userId);
 
   UserMarkers.findById(userId, (err, userMarkers) => {
-    console.log(err);
-    console.log(userMarkers);
     if (err) return res.status(500).json({'error': err});
     if (userMarkers == null) return res.status(404).json({});
 

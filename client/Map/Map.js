@@ -8,8 +8,6 @@ import axios from 'axios';
 class Map extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log('constructor');
     
     this.state = {
       map: null,
@@ -107,7 +105,7 @@ class Map extends React.Component {
   }
 
   componentWillMount() {
-    console.log('component will mount');
+
     DG.then(() => {
 
       const map = DG.map('map', {
@@ -129,7 +127,6 @@ class Map extends React.Component {
           return;
         else
           this.state.prevDbClickLatLng = res.latlng;
-          // this.setState({prevDbClickLatLng: res.latlng});
 
         this.state.userMarkersLayer.addLayer(DG.marker(res.latlng));
         
@@ -146,7 +143,7 @@ class Map extends React.Component {
         });
 
         DG.marker(res.latlng, {icon: locationIcon}).addTo(map).bindLabel('Your location', {static: false});
-        // this.setState({ location: res.latlng });
+
         this.state.location = res.latlng;
       });
 
@@ -158,14 +155,7 @@ class Map extends React.Component {
     })
   }
   
-  componentDidMount() {
-    console.log('component mounted');
-    let ss = document.getElementById('map');
-    console.log(ss);
-  }
-
   componentWillUnmount() {
-    console.log('component will unmounted');
 
     this.state.map.remove();
 
@@ -180,7 +170,6 @@ class Map extends React.Component {
   }
 
   render() {
-    console.log('render');
     return (
       <div>
         <div className="map row-fluid clearfix">

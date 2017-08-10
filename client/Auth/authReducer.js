@@ -10,7 +10,6 @@ export default (state = initialState, action = {}) => {
   switch(action.type) {
 
     case types.AUTH_VERIFY:
-      console.log('reducer AUTH_VERIFY');
       return {
         ...state, isLoading: true
       };

@@ -41,9 +41,5 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
-    ],
-  // devServer: {
-  //   contentBase: __dirname + '/public',
-  // },
-  
+    ],  
 };

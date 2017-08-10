@@ -31,7 +31,6 @@ class Auth extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    console.log('update', nextProps)
     if (nextProps.isAuthenticated)
       this.context.router.push('/');
   }
@@ -114,10 +113,9 @@ class Auth extends React.Component {
   }
 
   render() {
-    console.log('render');
     const { isNewUser, errors, isLoading, username, password, repassword } = this.state;
     const isAuthLoading = this.props.isAuthLoading;
-    console.log(isAuthLoading);
+    
     const form = (
       <form onSubmit={this.onSubmit} className="col-md-4 col-md-offset-4">
         <div className={`form-group ${errors.username && 'has-error'}`}>
