@@ -12,7 +12,7 @@ node_modules/
 .npm
 .env
 .DS_STORE
-public/
+public/js
 coverage/
 .module-cache
 *.log*
